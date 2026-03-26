@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Proposta Comercial — Eliana Moura Estúdio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-box-sizing:border-box}
+    :root{
+      --clr-bg:#faf9f7;
+      --clr-surface:#ffffff;
+      --clr-primary:#1a1a2e;
+      --clr-accent:#c9a96e;
+      --clr-accent-light:#e8d5b0;
+      --clr-accent-dark:#a8863f;
+      --clr-text:#3a3a4a;
+      --clr-text-light:#6b6b7b;
+      --clr-border:#e8e6e1;
+      --clr-red:#c0392b;
+      --clr-green:#27ae60;
+      --clr-blue:#2980b9;
+      --clr-purple:#8e44ad;
+      --clr-orange:#e67e22;
+      --radius:12px;
+      --shadow-sm:0 1px 3px rgba(0,0,0,.06);
+      --shadow-md:0 4px 20px rgba(0,0,0,.08);
+      --shadow-lg:0 8px 40px rgba(0,0,0,.1);
+      --font-sans:'Inter',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+      --font-serif:'Playfair Display',Georgia,serif;
+      --safe-top:env(safe-area-inset-top,0px);
+      --safe-right:env(safe-area-inset-right,0px);
+      --safe-bottom:env(safe-area-inset-bottom,0px);
+      --safe-left:env(safe-area-inset-left,0px);
+    }
+    html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
+    body{font-family:var(--font-sans);color:var(--clr-text);background:var(--clr-bg);line-height:1.7;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-tap-highlight-color:transparent}
+
+    /* ── NAV ── */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:calc(var(--safe-top) + 1rem) calc(var(--safe-right) + 2rem) 1rem calc(var(--safe-left) + 2rem);-webkit-transition:all .4s ease;transition:all .4s ease}
+    .nav.scrolled{background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);box-shadow:var(--shadow-sm)}
+    .nav-inner{max-width:1200px;margin:0 auto;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:space-between;justify-content:space-between}
+    .nav-brand{font-family:var(--font-serif);font-size:1.1rem;font-weight:600;color:var(--clr-primary);text-decoration:none;letter-spacing:-.02em}
+    .nav-links{display:-webkit-flex;display:flex;gap:1.5rem;list-style:none}
+    .nav-links a{font-size:.8rem;font-weight:500;color:var(--clr-text-light);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;-webkit-transition:color .3s;transition:color .3s}
+    .nav-links a:hover{color:var(--clr-accent-dark)}
+    .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem}
+    .nav-toggle span{display:block;width:22px;height:2px;background:var(--clr-primary);margin:5px 0;-webkit-transition:all .3s;transition:all .3s}
+
+    /* ── HERO ── */
+    .hero{min-height:100vh;min-height:100dvh;min-height:-webkit-fill-available;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem;position:relative;overflow:hidden;background-color:#1a1a2e;background-image:-webkit-linear-gradient(165deg,#1a1a2e 0%,#16213e 40%,#0f3460 100%);background-image:linear-gradient(165deg,#1a1a2e 0%,#16213e 40%,#0f3460 100%)}
+    .hero::before{content:'';position:absolute;top:-50%;right:-30%;width:80%;height:200%;background:radial-gradient(ellipse,rgba(201,169,110,.15) 0%,transparent 70%);pointer-events:none}
+    .hero-content{position:relative;z-index:2;max-width:700px}
+    .hero-badge{display:inline-block;padding:.45rem 1.2rem;border:1px solid rgba(201,169,110,.4);border-radius:100px;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--clr-accent-light);margin-bottom:2rem}
+    .hero h1{font-family:var(--font-serif);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:1.2rem;letter-spacing:-.02em}
+    .hero h1 span{color:var(--clr-accent)}
+    .hero p{font-size:1.05rem;color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:2.5rem;max-width:540px;margin-left:auto;margin-right:auto}
+    .hero-cta{display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;gap:.6rem;padding:.9rem 2rem;background:var(--clr-accent);color:#fff;text-decoration:none;border-radius:100px;font-size:.85rem;font-weight:600;letter-spacing:.03em;-webkit-transition:all .3s ease;transition:all .3s ease;box-shadow:0 4px 20px rgba(201,169,110,.3)}
+    .hero-cta:hover{background:var(--clr-accent-dark);-webkit-transform:translateY(-2px);transform:translateY(-2px);box-shadow:0 6px 30px rgba(201,169,110,.4)}
+    .hero-cta svg{width:16px;height:16px}
+    .hero-scroll{position:absolute;bottom:2.5rem;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-align-items:center;align-items:center;gap:.5rem;color:rgba(255,255,255,.35);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+    .hero-scroll .line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,.3),transparent)}
+
+    /* ── SECTIONS ── */
+    .section{padding:5rem 2rem}
+    .section-alt{background:var(--clr-surface)}
+    .container{max-width:900px;margin:0 auto}
+    .section-label{display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;gap:.5rem;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--clr-accent-dark);margin-bottom:1rem}
+    .section-label .dot{width:6px;height:6px;border-radius:50%;background:var(--clr-accent)}
+    .section-title{font-family:var(--font-serif);font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;color:var(--clr-primary);line-height:1.2;margin-bottom:1rem;letter-spacing:-.02em}
+    .section-subtitle{font-size:1.05rem;color:var(--clr-text-light);line-height:1.8;margin-bottom:2.5rem;max-width:650px}
+
+    /* ── ECOSYSTEM CARDS (reuse for plan cards) ── */
+    .eco-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:2rem}
+    .eco-card{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius);padding:1.5rem;-webkit-transition:all .3s ease;transition:all .3s ease}
+    .eco-card:hover{border-color:var(--clr-accent-light);box-shadow:var(--shadow-md);-webkit-transform:translateY(-3px);transform:translateY(-3px)}
+    .eco-card h4{font-size:.95rem;font-weight:700;color:var(--clr-primary);margin-bottom:.35rem}
+    .eco-card p{font-size:.82rem;color:var(--clr-text-light);line-height:1.6}
+
+    /* ── CALL OUT ── */
+    .callout{margin-top:2rem;padding:1.2rem 1.5rem;background:linear-gradient(135deg,rgba(201,169,110,.08),rgba(201,169,110,.03));border-left:3px solid var(--clr-accent);border-radius:0 var(--radius) var(--radius) 0;font-size:.9rem;color:var(--clr-text);line-height:1.7}
+    .callout strong{color:var(--clr-primary)}
+
+    /* ── PAIN / LIST ── */
+    .pain-card{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius);padding:2rem;margin-bottom:1.2rem;-webkit-transition:all .3s ease;transition:all .3s ease;position:relative;overflow:hidden}
+    .pain-card:hover{box-shadow:var(--shadow-md)}
+    .pain-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px}
+    .pain-card:nth-child(1)::before{background:var(--clr-red)}
+    .pain-card:nth-child(2)::before{background:var(--clr-orange)}
+    .pain-card:nth-child(3)::before{background:var(--clr-purple)}
+    .pain-badge{display:inline-block;padding:.25rem .7rem;border-radius:100px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.8rem}
+    .pain-card:nth-child(1) .pain-badge{background:#fdedec;color:var(--clr-red)}
+    .pain-card:nth-child(2) .pain-badge{background:#fdf2e9;color:var(--clr-orange)}
+    .pain-card:nth-child(3) .pain-badge{background:#f4ecf7;color:var(--clr-purple)}
+    .pain-card h3{font-size:1.1rem;font-weight:700;color:var(--clr-primary);margin-bottom:.8rem}
+    .pain-list{list-style:none;margin-bottom:1rem}
+    .pain-list li{position:relative;padding-left:1.4rem;font-size:.88rem;color:var(--clr-text);line-height:1.7;margin-bottom:.3rem}
+    .pain-list li::before{content:'';position:absolute;left:0;top:.55rem;width:6px;height:6px;border-radius:50%;background:var(--clr-border)}
+    .pain-insight{font-size:.85rem;color:var(--clr-accent-dark);font-weight:500;padding-top:.5rem;border-top:1px solid var(--clr-border)}
+
+    /* ── TECH / INFRA ── */
+    .info-cards{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:1.5rem}
+    .info-card{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius);padding:1.8rem;-webkit-transition:all .3s ease;transition:all .3s ease}
+    .info-card:hover{box-shadow:var(--shadow-md)}
+    .info-card.plan-proposta{cursor:pointer;position:relative}
+    .info-card.plan-proposta:hover{transform:translateY(-2px);-webkit-transform:translateY(-2px)}
+    .info-card.plan-proposta:focus{outline:2px solid rgba(201,169,110,.55);outline-offset:3px}
+    /* UX: mostrar lista resumida no card e revelar completo ao clicar */
+    .plan-proposta .info-list li:nth-child(n+5){display:none}
+    .plan-proposta.expanded .info-list li:nth-child(n+5){display:list-item}
+
+    .plan-expand-hint{
+      margin-top:1rem;
+      padding:.75rem 1rem;
+      border-radius:10px;
+      background:rgba(201,169,110,.08);
+      border:1px solid rgba(201,169,110,.22);
+      display:-webkit-flex;
+      display:flex;
+      -webkit-align-items:center;
+      align-items:center;
+      -webkit-justify-content:space-between;
+      justify-content:space-between;
+      gap:1rem;
+      cursor:pointer;
+      width:100%;
+      -webkit-box-sizing:border-box;
+      box-sizing:border-box;
+    }
+    .plan-expand-text{
+      font-size:.9rem;
+      font-weight:800;
+      color:var(--clr-accent-dark);
+      letter-spacing:-.01em;
+    }
+    .plan-expand-more{
+      width:12px;
+      height:12px;
+      border-right:2px solid var(--clr-accent-dark);
+      border-bottom:2px solid var(--clr-accent-dark);
+      -webkit-transform:rotate(-45deg);
+      transform:rotate(-45deg);
+      flex:0 0 auto;
+    }
+    .plan-proposta.expanded .plan-expand-hint{display:none}
+    .plan-proposta .callout{margin-top:1rem}
+    .plan-proposta .cloud-note{margin-top:1rem}
+    .info-card-icon{width:44px;height:44px;border-radius:10px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;font-size:1.3rem;margin-bottom:1rem}
+    .info-card:nth-child(1) .info-card-icon{background:#eaf2fe}
+    .info-card:nth-child(2) .info-card-icon{background:#f4ecf7}
+    .info-card h3{font-size:1rem;font-weight:700;color:var(--clr-primary);margin-bottom:.8rem}
+    .info-list{list-style:none}
+    .info-list li{position:relative;padding-left:1.2rem;font-size:.85rem;color:var(--clr-text);line-height:1.7;margin-bottom:.2rem}
+    .info-list li::before{content:'';position:absolute;left:0;top:.6rem;width:5px;height:5px;border-radius:50%;background:var(--clr-accent)}
+
+    .cloud-note{margin-top:1.5rem;padding:1.2rem 1.5rem;background:rgba(41,128,185,.06);border:1px solid rgba(41,128,185,.15);border-radius:var(--radius);font-size:.85rem;color:var(--clr-text);line-height:1.7}
+    .cloud-note strong{color:var(--clr-blue)}
+
+    /* ── details/summary (UX) ── */
+    details{
+      background:var(--clr-surface);
+      border:1px solid var(--clr-border);
+      border-radius:var(--radius);
+      padding:1.05rem 1.15rem;
+      margin:1rem 0;
+      -webkit-transition:box-shadow .2s ease;
+      transition:box-shadow .2s ease;
+    }
+    details[open]{box-shadow:var(--shadow-sm)}
+    summary{
+      cursor:pointer;
+      font-weight:800;
+      color:var(--clr-primary);
+      letter-spacing:-.01em;
+      outline:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    summary::after{
+      content:"";
+      float:right;
+      width:10px;
+      height:10px;
+      margin-top:.25rem;
+      border-right:2px solid var(--clr-accent);
+      border-bottom:2px solid var(--clr-accent);
+      transform:rotate(45deg);
+      -webkit-transform:rotate(45deg);
+    }
+    details[open] > summary::after{
+      transform:rotate(-135deg);
+      -webkit-transform:rotate(-135deg);
+      margin-top:.35rem;
+    }
+    .details-body{
+      margin-top:.75rem;
+      color:var(--clr-text);
+      font-size:.95rem;
+      line-height:1.7;
+    }
+    .details-body ul{list-style:none;padding-left:1.15rem;margin:.3rem 0}
+    .details-body li{position:relative;margin:.35rem 0}
+    .details-body li::before{
+      content:"";
+      position:absolute;
+      left:-1.05rem;
+      top:.58rem;
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:var(--clr-accent);
+    }
+
+    /* ── ALIGNMENT BANNER (reuse for quotes) ── */
+    .banner{padding:4rem 2rem;background-color:#1a1a2e;background-image:-webkit-linear-gradient(165deg,#1a1a2e 0%,#16213e 100%);background-image:linear-gradient(165deg,#1a1a2e 0%,#16213e 100%);text-align:center}
+    .banner-inner{max-width:650px;margin:0 auto}
+    .banner h2{font-family:var(--font-serif);font-size:clamp(1.4rem,3vw,2rem);color:#fff;margin-bottom:1rem;line-height:1.3}
+    .banner p{font-size:1rem;color:rgba(255,255,255,.6);line-height:1.8}
+    .banner p strong{color:var(--clr-accent-light)}
+
+    /* ── NEXT STEPS ── */
+    .steps{counter-reset:step;margin-top:2rem}
+    .step-item{display:-webkit-flex;display:flex;gap:1.5rem;margin-bottom:1.5rem;-webkit-align-items:flex-start;align-items:flex-start}
+    .step-num{counter-increment:step;width:48px;height:48px;min-width:48px;border-radius:50%;background:var(--clr-surface);border:2px solid var(--clr-accent);display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;font-size:1rem;font-weight:800;color:var(--clr-accent-dark)}
+    .step-body{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius);padding:1.5rem;-webkit-flex:1;flex:1;-webkit-transition:all .3s ease;transition:all .3s ease}
+    .step-body:hover{box-shadow:var(--shadow-md)}
+    .step-body h3{font-size:1rem;font-weight:700;color:var(--clr-primary);margin-bottom:.5rem}
+    .step-body p{font-size:.85rem;color:var(--clr-text-light);line-height:1.7}
+
+    /* ── ANIMATIONS ── */
+    .reveal{opacity:1;-webkit-transform:none;transform:none}
+
+    /* ── FOOTER ── */
+    .footer{padding:3rem 2rem calc(var(--safe-bottom) + 3rem);text-align:center;border-top:1px solid var(--clr-border)}
+    .footer p{font-size:.8rem;color:var(--clr-text-light)}
+    .footer .brand{font-family:var(--font-serif);font-weight:600;color:var(--clr-primary)}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:768px){
+      .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--clr-surface);-webkit-flex-direction:column;flex-direction:column;padding:1.5rem calc(var(--safe-left) + 2rem) 1.5rem calc(var(--safe-right) + 2rem);box-shadow:var(--shadow-md);gap:1rem}
+      .nav-links.open{display:-webkit-flex;display:flex}
+      .nav-toggle{display:block}
+      .info-cards{grid-template-columns:1fr}
+      .section{padding:3.5rem calc(var(--safe-left) + 1.2rem) 3.5rem calc(var(--safe-right) + 1.2rem)}
+      .hero{padding:5rem calc(var(--safe-right) + 1.2rem) 3rem calc(var(--safe-left) + 1.2rem)}
+      .step-item{-webkit-flex-direction:column;flex-direction:column;gap:.8rem}
+      .step-num{width:40px;height:40px;min-width:40px;font-size:.9rem}
+    }
+
+    /* ── iOS / Safari specific ── */
+    @supports(-webkit-touch-callout:none){
+      .hero{min-height:-webkit-fill-available}
+      body{-webkit-overflow-scrolling:touch}
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:var(--clr-bg)}
+    ::-webkit-scrollbar-thumb{background:var(--clr-accent-light);border-radius:3px}
+
+    /* ── PLAN MODAL (hightech UI) ── */
+    .modal-overlay{
+      position:fixed;
+      inset:0;
+      z-index:999;
+      display:none;
+      align-items:flex-end;
+      justify-content:center;
+      background:rgba(10,10,20,.35);
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      padding: calc(var(--safe-bottom) + 1.1rem) 1rem calc(1rem + var(--safe-bottom)) 1rem;
+    }
+    .modal-overlay.open{display:-webkit-flex;display:flex}
+    .modal-sheet{
+      width:100%;
+      max-width:1000px;
+      max-width:calc(100vw - 2rem);
+      display:-webkit-flex;
+      display:flex;
+      -webkit-flex-direction:column;
+      flex-direction:column;
+      max-height:calc(100dvh - 2rem);
+      max-height:calc(100vh - 2rem);
+      background:rgba(255,255,255,.94);
+      border:1px solid rgba(232,230,225,.9);
+      border-radius:18px;
+      box-shadow:var(--shadow-lg);
+      overflow:hidden;
+      -webkit-transform:translateY(10px);
+      transform:translateY(10px);
+      opacity:0;
+      -webkit-transition:-webkit-transform .22s ease, opacity .22s ease;
+      transition:transform .22s ease, opacity .22s ease;
+    }
+    .modal-overlay.open .modal-sheet{
+      -webkit-transform:translateY(0);
+      transform:translateY(0);
+      opacity:1;
+    }
+
+    /* Desktop: centralizar o modal no viewport */
+    @media(min-width:769px){
+      .modal-overlay{
+        align-items:center;
+        padding: calc(var(--safe-top) + 1rem) 1rem calc(var(--safe-bottom) + 1rem) 1rem;
+      }
+      .modal-sheet{
+        -webkit-transform:translateY(0);
+        transform:translateY(0);
+      }
+    }
+    .modal-head{
+      padding:1.1rem 1.25rem 1rem;
+      background:linear-gradient(165deg,rgba(26,26,46,.98) 0%,rgba(22,33,62,.98) 100%);
+      color:#fff;
+      position:relative;
+      -webkit-flex:0 0 auto;
+      flex:0 0 auto;
+    }
+    .modal-head::after{
+      content:'';
+      position:absolute;
+      inset:auto -20% -60% -20%;
+      height:140px;
+      background:radial-gradient(ellipse,rgba(201,169,110,.22) 0%,transparent 70%);
+      pointer-events:none;
+    }
+    .modal-head-inner{position:relative;z-index:1;display:-webkit-flex;display:flex;-webkit-align-items:flex-start;align-items:flex-start;-webkit-justify-content:space-between;justify-content:space-between;gap:1rem}
+    .modal-badge{
+      display:inline-block;
+      padding:.35rem .75rem;
+      border-radius:999px;
+      border:1px solid rgba(201,169,110,.45);
+      color:rgba(232,213,176,.98);
+      font-weight:800;
+      font-size:.75rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      margin-bottom:.55rem;
+      white-space:nowrap;
+    }
+    .modal-title{font-family:var(--font-serif);font-size:1.55rem;line-height:1.1;margin:0}
+    .modal-close{
+      border:none;
+      background:rgba(255,255,255,.10);
+      color:#fff;
+      width:40px;height:40px;
+      border-radius:12px;
+      cursor:pointer;
+      font-size:1.2rem;
+      -webkit-transition:background .2s ease, -webkit-transform .2s ease;
+      transition:background .2s ease, transform .2s ease;
+      -webkit-flex:0 0 auto;
+      flex:0 0 auto;
+    }
+    .modal-close:hover{background:rgba(255,255,255,.18);-webkit-transform:translateY(-1px);transform:translateY(-1px)}
+    .modal-body{padding:1.25rem;overflow-y:auto;-webkit-overflow-scrolling:touch;flex:1 1 auto;min-height:0}
+
+    .modal-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1rem;
+      margin-bottom:1.1rem;
+    }
+    .spec-card{
+      background:var(--clr-surface);
+      border:1px solid var(--clr-border);
+      border-radius:var(--radius);
+      padding:1rem;
+      -webkit-transition:all .2s ease;
+      transition:all .2s ease;
+    }
+    .spec-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--clr-text-light);margin-bottom:.5rem}
+    .spec-value{font-weight:900;color:var(--clr-primary);font-size:1rem;line-height:1.35}
+
+    .tech-chips{display:-webkit-flex;display:flex;flex-wrap:wrap;gap:.55rem;margin:.3rem 0 1rem}
+    .chip{
+      background:rgba(201,169,110,.12);
+      border:1px solid rgba(201,169,110,.26);
+      color:var(--accent-dark);
+      padding:.35rem .7rem;
+      border-radius:999px;
+      font-size:.82rem;
+      font-weight:800;
+      letter-spacing:-.01em;
+    }
+
+    .modal-section{margin-top:1.05rem}
+    .modal-section .section-label{margin-bottom:.8rem}
+    .tech-list{list-style:none;padding-left:0}
+    .tech-list li{
+      position:relative;
+      padding-left:1.35rem;
+      margin:.45rem 0;
+      font-size:.93rem;
+      line-height:1.7;
+    }
+    .tech-list li::before{
+      content:'';
+      position:absolute;
+      left:0;
+      top:.65rem;
+      width:7px;height:7px;
+      border-radius:2px;
+      background:linear-gradient(135deg,var(--clr-accent),var(--clr-accent-dark));
+    }
+
+    .plan-modal-content{display:none}
+    .plan-modal-content.active{display:block}
+
+    /* Entregas clicáveis com contexto (dentro do modal) */
+    .modal-section details.tech-details{
+      padding:0;
+      margin:.55rem 0;
+      background:transparent;
+      border:none;
+    }
+    .modal-section details.tech-details > summary{
+      margin:0;
+      padding:.75rem 1rem;
+      background:rgba(255,255,255,.45);
+      border:1px solid rgba(232,230,225,.95);
+      border-radius:12px;
+      list-style:none;
+    }
+    .modal-section details.tech-details > summary::-webkit-details-marker{display:none}
+    .modal-section details.tech-details .details-body{
+      margin-top:0;
+      padding:.75rem 1rem;
+      background:rgba(250,249,247,.98);
+      border:1px solid rgba(232,230,225,.95);
+      border-top:none;
+      border-bottom-left-radius:12px;
+      border-bottom-right-radius:12px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">Eliana Moura Estúdio</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#visao">Visão</a></li>
+      <li><a href="#essencial">Plano Essencial</a></li>
+      <li><a href="#proprietaria">Plataforma Proprietária</a></li>
+      <li><a href="#infraestrutura">Infraestrutura</a></li>
+      <li><a href="#manutencao">Manutenção</a></li>
+      <li><a href="#passos">Próximos Passos</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content reveal">
+    <div class="hero-badge">Proposta Comercial</div>
+    <h1>Plataforma Digital — <span>Alinhamento & Planos</span></h1>
+    <p>Perfeito — reforço este ponto de forma clara, profissional e estratégica para alinhar expectativa e proteger seu escopo.</p>
+    <a href="#visao" class="hero-cta">
+      Explorar Estrutura
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M7 7h10v10"/></svg>
+    </a>
+  </div>
+  <div class="hero-scroll">
+    <div class="line"></div>
+    scroll
+  </div>
+</section>
+
+<!-- VISÃO -->
+<section class="section" id="visao">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label"><span class="dot"></span> Visão Estratégica</div>
+      <h2 class="section-title">Duas rotas para alinhar expectativa</h2>
+      <p class="section-subtitle">O projeto pode seguir dois caminhos: Plano Essencial (entrada rápida e validação) ou Plataforma Proprietária (ativo digital completo).</p>
+    </div>
+
+    <div class="info-cards reveal">
+      <div class="info-card plan-proposta" id="essencial" role="button" tabindex="0" aria-label="Abrir apresentação do Plano Essencial">
+        <div class="info-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" fill="rgba(39,174,96,.18)"/>
+            <path d="M8.2 12.4l2.3 2.3 5.3-6.2" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Plano — Essencial</h3>
+        <p class="section-subtitle" style="margin-bottom:.9rem;max-width:none">Integração com Hotmart (Validação + Presença Digital)</p>
+        <ul class="info-list">
+        </ul>
+        <div class="plan-expand-hint" aria-hidden="true">
+          <span class="plan-expand-text">Toque para ver detalhes</span>
+        </div>
+        <div class="cloud-note">
+          <strong>Investimento:</strong> R$ 16.000,00<br>
+          <strong>Forma de pagamento:</strong> pago após a entrega do produto.
+        </div>
+      </div>
+
+      <div class="info-card plan-proposta" id="proprietaria" role="button" tabindex="0" aria-label="Abrir apresentação do Plano Plataforma Proprietária">
+        <div class="info-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" fill="rgba(192,57,43,.18)"/>
+            <path d="M8.2 10.7l3.2-3.2 4.6 4.6-3.2 3.2c-.4.4-.9.6-1.4.6H9.6c-.8 0-1.4-.6-1.4-1.4v-2.4c0-.5.2-1 .5-1.3Z" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.8 9.2l-2.1 2.1" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Plano — Plataforma Proprietária</h3>
+
+        <p class="section-subtitle" style="margin-bottom:.9rem;max-width:none">Escala e Independência (Sem Hotmart)</p>
+        <ul class="info-list">
+        </ul>
+        <div class="plan-expand-hint" aria-hidden="true">
+          <span class="plan-expand-text">Toque para ver detalhes</span>
+        </div>
+        <div class="cloud-note">
+          <strong>Investimento:</strong> R$ 45.000,00<br>
+          <strong>Forma de pagamento:</strong> pago após a entrega do produto e podendo ser parcelado.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN MODAL (hightech presentation on click) -->
+<div class="modal-overlay" id="planModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="planModalTitle">
+  <div class="modal-backdrop" data-close="true" style="position:absolute;inset:0"></div>
+  <div class="modal-sheet">
+    <div class="modal-head">
+      <div class="modal-head-inner">
+        <div>
+          <div class="modal-badge" id="planModalBadge"></div>
+          <h2 class="modal-title" id="planModalTitle"></h2>
+        </div>
+        <button class="modal-close" id="planModalClose" aria-label="Fechar" type="button">&times;</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <!-- Essencial -->
+      <div class="plan-modal-content" id="planModalEssencial">
+        <div class="modal-grid">
+          <div class="spec-card">
+            <div class="spec-label">Investimento</div>
+            <div class="spec-value">R$ 16.000,00</div>
+          </div>
+          <div class="spec-card">
+            <div class="spec-label">Pagamento</div>
+            <div class="spec-value">Após entrega do produto</div>
+          </div>
+        </div>
+
+        <div class="tech-chips">
+          <div class="chip">Hotmart</div>
+          <div class="chip">Validação</div>
+          <div class="chip">Presença Digital</div>
+          <div class="chip">Conversão UX</div>
+        </div>
+
+        <div class="modal-section">
+          <div class="section-label"><span class="dot"></span> Entregas</div>
+          <div class="tech-accordion">
+            <details class="tech-details">
+              <summary>Landing page institucional (marca-mãe)</summary>
+              <div class="details-body">
+                Página de entrada para apresentar a proposta, reforçar posicionamento e captar leads/atenção inicial
+                antes de direcionar o usuário para Estúdio e Escola.
+              </div>
+            </details>
+            <details class="tech-details">
+              <summary>Página do Estúdio (clientes + autoridade)</summary>
+              <div class="details-body">
+                Área para mostrar serviços, cases e credibilidade, transformando visitas em contatos qualificados
+                e acelerando conversão via prova social.
+              </div>
+            </details>
+            <details class="tech-details">
+              <summary>Página da Escola (catálogo de cursos)</summary>
+              <div class="details-body">
+                Catálogo organizado para facilitar escolha do aluno, melhorar entendimento do percurso e aumentar
+                conversão por clareza de oferta.
+              </div>
+            </details>
+            <details class="tech-details">
+              <summary>Integração com Hotmart (checkout e entrega)</summary>
+              <div class="details-body">
+                Checkout e automação de entrega para validar a ideia rapidamente, sem perder o foco na experiência do usuário.
+              </div>
+            </details>
+            <details class="tech-details">
+              <summary>Estrutura de navegação entre as frentes da marca</summary>
+              <div class="details-body">
+                Fluxo de menus e âncoras que conectam Escola e Estúdio, garantindo consistência de jornada e redução de atrito.
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <div class="section-label"><span class="dot"></span> Limitação (proteção de escopo)</div>
+          <div class="callout" style="margin-top:.8rem">
+            <strong>Limitação importante:</strong> este plano não resolve o problema por completo, pois mantém dependência de plataformas externas (Hotmart), limitando evolução futura.
+          </div>
+        </div>
+      </div>
+
+      <!-- Proprietária -->
+      <div class="plan-modal-content" id="planModalProprietaria">
+        <div class="modal-grid">
+          <div class="spec-card">
+            <div class="spec-label">Investimento</div>
+            <div class="spec-value">R$ 45.000,00</div>
+          </div>
+          <div class="spec-card">
+            <div class="spec-label">Pagamento</div>
+            <div class="spec-value">Após entrega (pode parcelar)</div>
+          </div>
+        </div>
+
+        <div class="tech-chips">
+          <div class="chip">Sem Hotmart</div>
+          <div class="chip">Controle total</div>
+          <div class="chip">Escala</div>
+          <div class="chip">CMS + Comunidade</div>
+        </div>
+
+        <div class="modal-section">
+          <div class="section-label"><span class="dot"></span> Entregas</div>
+          <div class="tech-accordion">
+            <details class="tech-details">
+              <summary>Plataforma própria de cursos</summary>
+              <div class="details-body">
+                Base completa para hospedar e evoluir seus cursos com independência, sem limitações impostas por terceiros.
+              </div>
+            </details>
+            <details class="tech-details">
+              <summary>Sistema de pagamento integrado</summary>
+              <div class="details-body">
+                Pagamentos dentro do fluxo da plataforma para reduzir atrito e melhorar percepção de marca.
+              </div>
+            </details>
+            <details class="tech-details">
+              <summary>Área do aluno completa</summary>
+              <div class="details-body">
+                Central de acesso com conteúdo, progresso, histórico e pontos de interação para manter retenção.
+              </div>
+            </details>
+            <details class="tech-details">
+              <summary>Trilhas personalizadas</summary>
+              <div class="details-body">
+                Conteúdo guiado por perfil para aumentar entendimento, engajamento e avanço no aprendizado.
+              </div>
+            </details>
+            <details class="tech-details">
+              <summary>Certificação própria</summary>
+              <div class="details-body">
+                Certificação integrada ao ecossistema para reforçar autoridade e valor percebido pelos alunos.
+              </div>
+            </details>
+            <details class="tech-details">
+              <summary>Comunidade + Gamificação</summary>
+              <div class="details-body">
+                Mecanismos de motivação para estimular participação e reduzir abandono ao longo da jornada.
+              </div>
+            </details>
+            <details class="tech-details">
+              <summary>Painel administrativo completo</summary>
+              <div class="details-body">
+                Gestão operacional com visibilidade para controlar entregas, status, usuários e integrações.
+              </div>
+            </details>
+            <details class="tech-details">
+              <summary>Controle total de alunos e dados</summary>
+              <div class="details-body">
+                Base proprietária de dados para melhorar segmentação, métricas e evolução do produto.
+              </div>
+            </details>
+            <details class="tech-details">
+              <summary>SEO básico</summary>
+              <div class="details-body">
+                Estrutura técnica mínima para apoiar indexação e descoberta do conteúdo com consistência.
+              </div>
+            </details>
+            <details class="tech-details">
+              <summary>CMS para gestão de conteúdo</summary>
+              <div class="details-body">
+                Facilidade para atualizar páginas, aulas e informações sem depender de alterações constantes no código.
+              </div>
+            </details>
+            <details class="tech-details">
+              <summary>Estrutura de cross-sell e progressão</summary>
+              <div class="details-body">
+                Conexão entre ofertas e avanço do aluno para aumentar conversão e prolongar permanência no ecossistema.
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <div class="section-label"><span class="dot"></span> Diferencial</div>
+          <div class="cloud-note" style="margin-top:.8rem">
+            <strong>Resultado:</strong> aqui a plataforma deixa de ser um sistema estático e passa a evoluir continuamente junto com o negócio.
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <div class="callout" style="margin-top:.8rem">
+            <strong>Observação:</strong> a seção <em>Infraestrutura (Cloud)</em> detalha recomendação, responsabilidade do cliente e estimativas de custo mensal (não atreladas a um plano).
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INFRAESTRUTURA (não atrelar a nenhum plano) -->
+<section class="section section-alt" id="infraestrutura">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label"><span class="dot"></span> Infraestrutura (Cloud)</div>
+      <h2 class="section-title">Clareza de responsabilidade e estimativas</h2>
+      <p class="section-subtitle">
+        Recomendação, responsabilidade do cliente e faixas de custo mensal — para alinhar expectativa e proteger seu escopo.
+      </p>
+    </div>
+
+    <details open>
+      <summary>Recomendado</summary>
+      <div class="details-body">
+        <strong>Amazon Web Services (AWS)</strong>.
+      </div>
+    </details>
+
+    <details>
+      <summary>Responsabilidade do cliente</summary>
+      <div class="details-body">
+        Custos de infraestrutura integralmente do cliente:
+        <ul>
+          <li>Conta cloud em nome do cliente</li>
+          <li>Pagamento direto ao provedor</li>
+          <li>Total transparência e controle</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>Estimativa mensal (faixas)</summary>
+      <div class="details-body">
+        Faixas mensais conforme a rota de implementação (complexidade):
+        <ul>
+          <li>Essencial: R$ 2.000 a R$ 7.000/mês</li>
+          <li>Plataforma Proprietária: R$ 6.000 a R$ 25.000+/mês</li>
+        </ul>
+      </div>
+    </details>
+
+    <div class="callout">
+      <strong>UX de proteção:</strong> esta seção existe para evitar surpresas e garantir alinhamento antes do início do desenvolvimento.
+    </div>
+  </div>
+</section>
+
+<!-- MANUTENÇÃO -->
+<section class="section section-alt" id="manutencao">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label"><span class="dot"></span> Suporte e Manutenção</div>
+      <h2 class="section-title">Pós-entrega: serviços separados</h2>
+      <p class="section-subtitle">O desenvolvimento entrega a plataforma funcional. O suporte e a manutenção são contratados separadamente após a entrega.</p>
+    </div>
+
+    <div class="callout reveal" style="margin-top:0">
+      <strong>Ponto extremamente importante:</strong> o suporte e manutenção são serviços contratados separadamente, após a entrega do produto. O desenvolvimento contempla a entrega da plataforma funcional; após essa entrega, o cliente pode optar por um plano contínuo (não é obrigatório, mas é altamente recomendado).
+    </div>
+
+    <div class="pain-cards-wrap">
+      <div class="pain-card reveal">
+        <span class="pain-badge">Estabilidade</span>
+        <h3>🟢 Plano Básico — Estabilidade</h3>
+        <ul class="pain-list">
+          <li>Correções de bugs</li>
+          <li>Ajustes técnicos</li>
+          <li>Monitoramento básico</li>
+          <li>Garantia de funcionamento</li>
+        </ul>
+        <div class="pain-insight"><strong>Valor:</strong> R$ 2.500/mês</div>
+      </div>
+
+      <div class="pain-card reveal">
+        <span class="pain-badge">Evolução Contínua</span>
+        <h3>🔴 Plano Estratégico — Evolução Contínua</h3>
+        <ul class="pain-list">
+          <li>Tudo do plano básico</li>
+          <li>Desenvolvimento de novas funcionalidades</li>
+          <li>Melhorias contínuas de UX</li>
+          <li>Otimizações de performance</li>
+          <li>Evolução da plataforma</li>
+          <li>Apoio estratégico</li>
+        </ul>
+        <div class="pain-insight"><strong>Valor:</strong> R$ 4.500/mês</div>
+        <div class="cloud-note">
+          <strong>Diferencial:</strong> aqui a plataforma deixa de ser um sistema estático e passa a evoluir continuamente junto com o negócio.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRÓXIMOS PASSOS -->
+<section class="section" id="passos">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label"><span class="dot"></span> Próximos Passos</div>
+      <h2 class="section-title">Roteiro de execução</h2>
+      <p class="section-subtitle">Fluxo sugerido para iniciar e acompanhar a entrega com clareza de escopo.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step-item reveal">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Escolha do plano de desenvolvimento</h3>
+          <p>Definir Essencial ou Plataforma Proprietária.</p>
+        </div>
+      </div>
+      <div class="step-item reveal">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Ajuste fino do escopo</h3>
+          <p>Alinhamento final para proteger o que entra e o que fica fora.</p>
+        </div>
+      </div>
+      <div class="step-item reveal">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Definição técnica</h3>
+          <p>Arquitetura, integrações e critérios de entrega.</p>
+        </div>
+      </div>
+      <div class="step-item reveal">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Início do desenvolvimento</h3>
+          <p>Kickoff do projeto e início da execução.</p>
+        </div>
+      </div>
+      <div class="step-item reveal">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h3>Entrega da plataforma</h3>
+          <p>Produto funcional entregue e disponível para operação.</p>
+        </div>
+      </div>
+      <div class="step-item reveal">
+        <div class="step-num">6</div>
+        <div class="step-body">
+          <h3>Escolha (opcional) do plano de manutenção</h3>
+          <p>Decisão sobre continuidade e evolução contínua.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout reveal">
+      <strong>“O desenvolvimento entrega o produto. A manutenção garante que ele continue funcionando e evoluindo.”</strong>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p><span class="brand">Eliana Moura Estúdio</span> &mdash; Proposta Comercial &middot; Safari iPhone/macOS</p>
+</footer>
+
+<script>
+(function(){
+  // Nav scroll effect — use passive listener for better iOS scroll perf
+  var nav = document.getElementById('nav');
+  if (nav) {
+    window.addEventListener('scroll', function() {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+  }
+
+  // Mobile menu
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() { links.classList.toggle('open'); });
+    var navAnchors = links.querySelectorAll('a');
+    for (var i = 0; i < navAnchors.length; i++) {
+      navAnchors[i].addEventListener('click', function() { links.classList.remove('open'); });
+    }
+  }
+
+  // Smooth scroll polyfill for Safari < 15.4
+  if (!('scrollBehavior' in document.documentElement.style)) {
+    var anchors = document.querySelectorAll('a[href^="#"]');
+    for (var j = 0; j < anchors.length; j++) {
+      anchors[j].addEventListener('click', function(e) {
+        var href = this.getAttribute('href');
+        if (!href || href === '#') return;
+        var target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          var top = target.getBoundingClientRect().top + window.pageYOffset;
+          var start = window.pageYOffset;
+          var distance = top - start;
+          var duration = 600;
+          var startTime = null;
+          function step(ts) {
+            if (!startTime) startTime = ts;
+            var progress = Math.min((ts - startTime) / duration, 1);
+            var ease = progress < 0.5
+              ? 4 * progress * progress * progress
+              : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+            window.scrollTo(0, start + distance * ease);
+            if (progress < 1) window.requestAnimationFrame(step);
+          }
+          window.requestAnimationFrame(step);
+        }
+      });
+    }
+  }
+
+  // Hightech plan modal
+  var modal = document.getElementById('planModal');
+  var modalClose = document.getElementById('planModalClose');
+  var bodyEl = document.body;
+  var prevOverflow = bodyEl ? bodyEl.style.overflow : '';
+
+  function setActivePlan(plan){
+    if (!modal) return;
+    var badge = document.getElementById('planModalBadge');
+    var title = document.getElementById('planModalTitle');
+    var ess = document.getElementById('planModalEssencial');
+    var prop = document.getElementById('planModalProprietaria');
+
+    if (ess) ess.classList.remove('active');
+    if (prop) prop.classList.remove('active');
+
+    if (plan === 'essencial') {
+      if (badge) badge.textContent = 'Plano Essencial';
+      if (title) title.textContent = 'Plano — Essencial';
+      if (ess) ess.classList.add('active');
+    } else {
+      if (badge) badge.textContent = 'Plataforma Proprietária';
+      if (title) title.textContent = 'Plano — Plataforma Proprietária';
+      if (prop) prop.classList.add('active');
+    }
+  }
+
+  function openPlan(plan){
+    if (!modal) return;
+    setActivePlan(plan);
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    if (bodyEl) bodyEl.style.overflow = 'hidden';
+
+    if (plan === 'essencial') {
+      if (essentialCard) essentialCard.classList.add('expanded');
+      if (proprietariaCard) proprietariaCard.classList.remove('expanded');
+    } else {
+      if (proprietariaCard) proprietariaCard.classList.add('expanded');
+      if (essentialCard) essentialCard.classList.remove('expanded');
+    }
+  }
+
+  function closeModal(){
+    if (!modal) return;
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    if (bodyEl) bodyEl.style.overflow = prevOverflow;
+
+    if (essentialCard) essentialCard.classList.remove('expanded');
+    if (proprietariaCard) proprietariaCard.classList.remove('expanded');
+  }
+
+  var essentialCard = document.getElementById('essencial');
+  var proprietariaCard = document.getElementById('proprietaria');
+
+  if (essentialCard) {
+    essentialCard.addEventListener('click', function(){ openPlan('essencial'); });
+    essentialCard.addEventListener('keydown', function(e){
+      var key = e.key || '';
+      if (key === 'Enter' || key === ' ') {
+        e.preventDefault();
+        openPlan('essencial');
+      }
+    });
+  }
+
+  if (proprietariaCard) {
+    proprietariaCard.addEventListener('click', function(){ openPlan('proprietaria'); });
+    proprietariaCard.addEventListener('keydown', function(e){
+      var key = e.key || '';
+      if (key === 'Enter' || key === ' ') {
+        e.preventDefault();
+        openPlan('proprietaria');
+      }
+    });
+  }
+
+  if (modalClose) {
+    modalClose.addEventListener('click', function(){ closeModal(); });
+  }
+
+  if (modal) {
+    modal.addEventListener('click', function(e){
+      var target = e.target || {};
+      if (target.getAttribute && target.getAttribute('data-close') === 'true') closeModal();
+    });
+  }
+
+  // Close on ESC
+  window.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeModal();
+  }, { passive: true });
+
+})();
+</script>
+</body>
+</html>
+
